@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Temp. vs Latitude</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--Reset CSS code-->
+	<link rel="stylesheet" href="reset.css">
+<!--Bootstrap CSS code-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylesheet.css">
+
+<!-- favicon stuff -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+</head>
+
+<body>
+	<!-- NAVBAR STUFF HERE -->
+	<div style="background-color: #a9cce7">
+			<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="main.html"><img src="images/weather-icon-png-5.png" width="40">Weather Analysis</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Plots
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="temp.html">Temperature</a>
+						<a class="dropdown-item" href="humidity.html">Humidity</a>
+						<a class="dropdown-item" href="clouds.html">Cloudiness</a>
+						<a class="dropdown-item" href="wind.html">Wind</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="comparison.html">Comparisons</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="data.html">Data</a>
+					</li>
+					</ul>
+				</div>
+				</nav>
+			</div>
+		</div>
+		<!-- End Navbar -->
+
+<!-- Spacing row -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>&nbsp</h2>
+			</div>
+		</div>
+	</div>
+
+<!-- Main content here -->
+<div class="container">
+		<div class="row">
+		<div class="col-md-8">
+			<h2>Max Temperature vs. Latitude</h2>
+			<hr>
+			<img src="images/output_11_0.png" width="75%" alt="temperature vs. latitude" style="margin:5px 30px">
+			<p><b>Three things to note:</b></p>
+			<ul>
+				<li>Temperatures appear to peak not at the equator, but at approximately 15-20 degrees of latitude. </li>
+				<li>Southern Hemisphere latitudes only reach -60 degrees due to the distribution of land mass around the globe, 
+					and the lack of cities in Antarctica from which we were able to pull data for this project.</li>
+				<li>Temperatures seem to decrease more rapidly in the northern hemisphere than in the southern hemisphere. 
+					At 40 degrees latitude, the average temperature was approximately 20 degrees Fahrenheit cooler than at 
+					-40 degrees latitude. This is likely due again to the larger land mass in the northern hemisphere, 
+					with a larger variety of weather conditions.</li>
+			</ul>
+		</div>
+
+		<div class="col-md-4">
+			<h2>Visualizations</h2>
+					<hr>
+					<div class="row">
+						<div class="col-md-12">
+							<a href="temp.html"><img class="vis_i active_i" src="images/output_11_0.png" alt="temp vs. latitude"></a>
+							<a href="humidity.html"><img class="vis_i" src="images/output_12_0.png" width="120" alt="humidity vs. latitude"></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<a href="clouds.html"><img class="vis_i" src="images/output_13_0.png" width="120" alt="cloudiness vs. latitude"></a>
+							<a href="wind.html"><img class="vis_i" src="images/output_14_0.png" width="120" alt="wind speed vs. latitude"></a>
+							</div>
+						</div>
+					</div>
+			  </div>
+			</div>
+
+<!--Footer-->
+	
+	<div style="background-color: #053b64">
+		<div class="container">
+				<div class="row" style="margin-top: 85px; padding-top:20px; padding-bottom: 10px">
+					<div class="col-md-12">
+						<p align="center" style="color:azure">© 2018 Copyright: Aaron Burke</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Footer -->
+
+<!-- js code for dropdown menus, etc.     -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>    
+</body>
+</html>

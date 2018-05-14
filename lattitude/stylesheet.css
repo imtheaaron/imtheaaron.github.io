@@ -1,0 +1,31 @@
+.vis_i {
+    width: 120px;
+    margin:5px 5px; 
+    padding:5px; 
+    float: left
+}
+
+.active_i {
+    border:2px solid #a9cce7;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul li {
+    padding: 5px;
+    margin-left: 35px;
+}
+
+h2 {
+    color: #17588a;
+}
+
+h3 {
+    color: #317db8;
+}
+
+a {
+    color: rgb(55, 91, 211)
+}
