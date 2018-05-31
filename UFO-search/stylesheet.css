@@ -24,3 +24,8 @@
 th {
 
 }
+
+.searchbox {
+    float: left;
+    margin-right: 5px;
+}
