@@ -56,6 +56,12 @@ function handleSearchButtonClick() {
         return shapes === filterSearch;
         });
     }
+  dateInput.value = '';
+  cityInput.value = '';
+  stateInput.value = '';
+  countryInput.value = '';
+  shapeInput.value = '';
+
   renderTable();
 }
 
