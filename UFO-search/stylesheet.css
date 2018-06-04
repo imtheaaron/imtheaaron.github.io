@@ -20,12 +20,15 @@
     word-wrap: break-word; 
 }
 
-/* NEED TO ADD CODE HERE TO GIVE A LITTLE MARGIN FOR THE TABLE HEADERS TEXT */
 th {
+    padding: 5px;
+}
 
+td {
+    padding: 5px;
 }
 
 .searchbox {
     float: left;
-    margin-right: 5px;
+    margin-right: 10px;
 }

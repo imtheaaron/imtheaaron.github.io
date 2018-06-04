@@ -1,6 +1,9 @@
 var tbody = document.querySelector("tbody");
 var dateInput = document.querySelector("#date-search");
 var cityInput = document.querySelector("#city-search");
+var stateInput = document.querySelector("#state-search");
+var countryInput = document.querySelector("#country-search");
+var shapeInput = document.querySelector("#shape-search");
 var searchBtn = document.querySelector("#search");
 
 searchBtn.addEventListener("click", handleSearchButtonClick);
@@ -8,23 +11,51 @@ searchBtn.addEventListener("click", handleSearchButtonClick);
 var filteredSightings = dataSet;
 
 function handleSearchButtonClick() {
- 
+    if (dateInput.value) {
     var filterSearch = dateInput.value.trim();
     // Set filteredAddresses to an array of all addresses whose "state" matches the filter
     filteredSightings = dataSet.filter(function(sighting) {
       var dates = sighting.datetime;
       // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
       return dates === filterSearch;
-    });
-  // if (cityInput != null){ 
-  //   var filterSearch = cityInput.value.trim().toLowerCase();
-  //   // Set filteredAddresses to an array of all addresses whose "state" matches the filter
-  //   filteredSightings = filteredSightings.filter(function(sighting) {
-  //     var cities = sighting.city;
-  //     // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
-  //     return cities === filterSearch;
-  //   });
-
+        });
+    }
+    if (cityInput.value) { 
+    var filterSearch = cityInput.value.trim().toLowerCase();
+    // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+    filteredSightings = filteredSightings.filter(function(sighting) {
+      var cities = sighting.city;
+      // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+      return cities === filterSearch;
+        });
+    }
+    if (stateInput.value) { 
+        var filterSearch = stateInput.value.trim().toLowerCase();
+        // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+        filteredSightings = filteredSightings.filter(function(sighting) {
+        var states = sighting.state;
+        // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+        return states === filterSearch;
+        });
+    }
+    if (countryInput.value) { 
+        var filterSearch = countryInput.value.trim().toLowerCase();
+        // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+        filteredSightings = filteredSightings.filter(function(sighting) {
+        var countries = sighting.country;
+        // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+        return countries === filterSearch;
+        });
+    }
+    if (shapeInput.value) { 
+        var filterSearch = shapeInput.value.trim().toLowerCase();
+        // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+        filteredSightings = filteredSightings.filter(function(sighting) {
+        var shapes = sighting.shape;
+        // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+        return shapes === filterSearch;
+        });
+    }
   renderTable();
 }
 
