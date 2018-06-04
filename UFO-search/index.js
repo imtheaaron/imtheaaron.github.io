@@ -5,13 +5,13 @@ var searchBtn = document.querySelector("#search");
 
 searchBtn.addEventListener("click", handleSearchButtonClick);
 
-var filteredSightings = partial;
+var filteredSightings = dataSet;
 
 function handleSearchButtonClick() {
  
     var filterSearch = dateInput.value.trim();
     // Set filteredAddresses to an array of all addresses whose "state" matches the filter
-    filteredSightings = partial.filter(function(sighting) {
+    filteredSightings = dataSet.filter(function(sighting) {
       var dates = sighting.datetime;
       // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
       return dates === filterSearch;
@@ -46,7 +46,3 @@ function renderTable() {
   };
 
 renderTable();
-
-// NEED TO RENDER THE TABLE INITIALLY
-// then we need a function that will grab the input from a search box and use that to sort
-// then we need a function that will render data from our sorted dataset
