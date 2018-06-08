@@ -8,15 +8,20 @@ var searchBtn = document.querySelector("#search");
 var records_per_page = 30; //this is the number of results we will display per page with pagination
 var current_page = 1;
 
+
 searchBtn.addEventListener("click", handleSearchButtonClick);
 
 var filteredSightings = dataSet;
 
 function handleSearchButtonClick() {
+    filteredSightings = dataSet;
+    current_page = 1;
+    document.getElementById("page").innerHTML = current_page;
+
     if (dateInput.value) {
     var filterSearch = dateInput.value.trim();
     // Set filteredAddresses to an array of all addresses whose "state" matches the filter
-    filteredSightings = dataSet.filter(function(sighting) {
+    filteredSightings = filteredSightings.filter(function(sighting) {
       var dates = sighting.datetime;
       // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
       return dates === filterSearch;
@@ -65,25 +70,8 @@ function handleSearchButtonClick() {
   shapeInput.value = '';
 
   current_page = 1;
-  changePage(1);
+  changePage(current_page);
 }
-
-// function renderTable() {
-//     tbody.innerHTML = "";
-//     for (var i = 0; i < filteredSightings.length; i++) {
-//       // Get get the current sighting object and its fields
-//       var sighting = filteredSightings[i];
-//       var fields = Object.keys(sighting);
-//       // Create a new row in the tbody, set the index to be i
-//       var row = tbody.insertRow(i);
-//       for (var j = 0; j < fields.length; j++) {
-//         // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
-//         var field = fields[j];
-//         var cell = row.insertCell(j);
-//         cell.innerText = sighting[field];
-//       }
-//     }
-//   };
 
 function prevPage()
 {
@@ -113,17 +101,32 @@ function changePage(page)
 
     tbody.innerHTML = "";
 
-    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
-        var sighting = filteredSightings[i];
-        var fields = Object.keys(sighting);
-        var k = i - (page-1) * records_per_page
-        var row = tbody.insertRow(k);
-        for (var j = 0; j < fields.length; j++) {
-        // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
-        var field = fields[j];
-        var cell = row.insertCell(j);
-        cell.innerText = sighting[field];
-      }
+    if (filteredSightings.length > page * records_per_page) {
+        for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+            var sighting = filteredSightings[i];
+            var fields = Object.keys(sighting);
+            var k = i - (page-1) * records_per_page
+            var row = tbody.insertRow(k);
+            for (var j = 0; j < fields.length; j++) {
+            // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
+            var field = fields[j];
+            var cell = row.insertCell(j);
+            cell.innerText = sighting[field];
+            }
+        }
+    } else {
+        for (var i = (page-1) * records_per_page; i < filteredSightings.length; i++) {
+            var sighting = filteredSightings[i];
+            var fields = Object.keys(sighting);
+            var k = i - (page-1) * records_per_page
+            var row = tbody.insertRow(k);
+            for (var j = 0; j < fields.length; j++) {
+            // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
+            var field = fields[j];
+            var cell = row.insertCell(j);
+            cell.innerText = sighting[field];
+            }
+        }
     }
 
     page_span.innerHTML = page;
@@ -139,6 +142,9 @@ function changePage(page)
     } else {
         btn_next.style.visibility = "visible";
     }
+    console.log(filteredSightings.length)
+    console.log(page);
+    console.log(numPages());
 }
 
 function numPages()
