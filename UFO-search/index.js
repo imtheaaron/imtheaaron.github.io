@@ -5,6 +5,8 @@ var stateInput = document.querySelector("#state-search");
 var countryInput = document.querySelector("#country-search");
 var shapeInput = document.querySelector("#shape-search");
 var searchBtn = document.querySelector("#search");
+var records_per_page = 30; //this is the number of results we will display per page with pagination
+var current_page = 1;
 
 searchBtn.addEventListener("click", handleSearchButtonClick);
 
@@ -62,24 +64,89 @@ function handleSearchButtonClick() {
   countryInput.value = '';
   shapeInput.value = '';
 
-  renderTable();
+  current_page = 1;
+  changePage(1);
 }
 
-function renderTable() {
+// function renderTable() {
+//     tbody.innerHTML = "";
+//     for (var i = 0; i < filteredSightings.length; i++) {
+//       // Get get the current sighting object and its fields
+//       var sighting = filteredSightings[i];
+//       var fields = Object.keys(sighting);
+//       // Create a new row in the tbody, set the index to be i
+//       var row = tbody.insertRow(i);
+//       for (var j = 0; j < fields.length; j++) {
+//         // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
+//         var field = fields[j];
+//         var cell = row.insertCell(j);
+//         cell.innerText = sighting[field];
+//       }
+//     }
+//   };
+
+function prevPage()
+{
+    if (current_page > 1) {
+        current_page--;
+        changePage(current_page);
+    }
+}
+
+function nextPage()
+{
+    if (current_page < numPages()) {
+        current_page++;
+        changePage(current_page);
+    }
+}
+
+function changePage(page)
+{
+    var btn_next = document.getElementById("btn_next");
+    var btn_prev = document.getElementById("btn_prev");
+    var page_span = document.getElementById("page");
+
+    // Validate page
+    if (page < 1) page = 1;
+    if (page > numPages()) page = numPages();
+
     tbody.innerHTML = "";
-    for (var i = 0; i < filteredSightings.length; i++) {
-      // Get get the current sighting object and its fields
-      var sighting = filteredSightings[i];
-      var fields = Object.keys(sighting);
-      // Create a new row in the tbody, set the index to be i
-      var row = tbody.insertRow(i);
-      for (var j = 0; j < fields.length; j++) {
+
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        var sighting = filteredSightings[i];
+        var fields = Object.keys(sighting);
+        var k = i - (page-1) * records_per_page
+        var row = tbody.insertRow(k);
+        for (var j = 0; j < fields.length; j++) {
         // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
         var field = fields[j];
         var cell = row.insertCell(j);
         cell.innerText = sighting[field];
       }
     }
-  };
 
-renderTable();
+    page_span.innerHTML = page;
+
+    if (page == 1) {
+        btn_prev.style.visibility = "hidden";
+    } else {
+        btn_prev.style.visibility = "visible";
+    }
+
+    if (page == numPages()) {
+        btn_next.style.visibility = "hidden";
+    } else {
+        btn_next.style.visibility = "visible";
+    }
+}
+
+function numPages()
+{
+    return Math.ceil(filteredSightings.length / records_per_page);
+}
+
+window.onload = function() {
+    changePage(1);
+};
+
