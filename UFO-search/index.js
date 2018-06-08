@@ -16,7 +16,7 @@ var filteredSightings = dataSet;
 function handleSearchButtonClick() {
     filteredSightings = dataSet;
     current_page = 1;
-    document.getElementById("page").innerHTML = current_page;
+    // document.getElementById("page").innerHTML = current_page;
 
     if (dateInput.value) {
     var filterSearch = dateInput.value.trim();
@@ -129,7 +129,7 @@ function changePage(page)
         }
     }
 
-    page_span.innerHTML = page;
+    page_span.innerHTML = `Page: ${page}`;
 
     if (page == 1) {
         btn_prev.style.visibility = "hidden";
