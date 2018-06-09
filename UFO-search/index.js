@@ -91,6 +91,8 @@ function nextPage()
 
 function changePage(page)
 {
+    window.location.href = "#top-table";
+
     var btn_next = document.getElementById("btn_next");
     var btn_prev = document.getElementById("btn_prev");
     var page_span = document.getElementById("page");
