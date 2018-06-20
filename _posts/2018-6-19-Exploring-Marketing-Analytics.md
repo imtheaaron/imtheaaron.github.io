@@ -5,7 +5,7 @@ title: Exploring Marketing Analytics
 
 I'm excited to get this site started, and have a space for my ideas and thoughts on the intersection of data, analytics, and marketing.
 
-We're bombarded with a wealth of data and what at times feels like an overabundance of tools to view, analyze, and makes sense of this data. Yet so often I've seen marketing analytics boil down to:
+We're bombarded with a wealth of data and what at times feels like an overabundance of tools to view, analyze, and make sense of this data. Yet so often I've seen marketing analytics boil down to:
 
 + Look at some basic web site traffic data
 + Track email opens and clicks
