@@ -1,15 +1,31 @@
 ---
 layout: page
-title: About
+title: About Aaron
 permalink: /about/
 ---
 
-Some information about you!
+I'm a technical marketer with a focus on data, analytics, and marketing-focused business operations.
 
-### More Information
+I've been a people manager, a global product manager, a head of marketing, a medical device startup founder, and I'm currently refining my skillset - focusing on data analysis using Python, and web data visualization using Javascript and d3.
 
-A place to include any other types of information that you'd like to include about yourself.
+### Skills
+
++ Google Analytics
++ Google Adwords (certified)
++ SEO
++ Python
++ Pandas
++ Matplotlib
++ Git
++ HTML/CSS
++ Javascript
++ d3 / Plotly.js
++ Leaflet
++ Flask
++ SQL
++ MongoDB
++ Adobe PS/ID
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+aaron [at] aaronburke.net
