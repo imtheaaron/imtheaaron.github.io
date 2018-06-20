@@ -15,4 +15,4 @@ Data can give us so much more. It can let us find our audience, help us make dis
 
 I plan to have this site serve as a repository not only for my thoughts on marketing, data, and analytics - but also my discoveries as I explore this field. Hopefully some of what ends up here will provide value to those with similar interests. But even if it doesn't, I plan to enjoy myself.
 
-![marketing data anlytics logo] (http://
+![marketing data anlytics logo](https://raw.githubusercontent.com/imtheaaron/imtheaaron.github.io/master/images/mda.png)
