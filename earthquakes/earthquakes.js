@@ -20,22 +20,24 @@ function makeMap(data) {
       // Create a GeoJSON layer containing the features array on the earthquakeData object
       // Run the onEachFeature function once for each piece of data in the array
 
-    var quakes = L.geoJson(data, {
-        onEachFeature: onEachFeature,
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng);
-        },
-        style: function(feature) {
-            return {
-                radius: feature.properties.mag,
-                color: "black",
-                // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-                fillColor: "red",
-                fillOpacity: 0.5,
-                weight: 1.5
-            };
-        },
-    });
+    var quakes = L.geoJson(data);
+    //  {
+        
+        // pointToLayer: function (feature, latlng) {
+        //     return L.circleMarker(latlng);
+        // },
+    //     style: function(feature) {
+    //         return {
+    //             radius: feature.properties.mag,
+    //             color: "black",
+    //             // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
+    //             fillColor: "red",
+    //             fillOpacity: 0.5,
+    //             weight: 1.5
+    //         };
+    //     },
+    //     onEachFeature: onEachFeature,
+    // });
 
     // Define map layers
     var lightMap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?" +
@@ -50,17 +52,17 @@ function makeMap(data) {
     "Outdoors Map": outdoorMap
     };
 
-    var earthQuakeMaps = {
+    var overlayMaps = {
         Earthquakes: quakes
     };
     
     var myMap = L.map("map", {
         center: [37.6533476, -121.0236725],
-        zoom: 5,
-        layers: [lightMap, outdoorMap]
+        zoom: 3,
+        layers: [lightMap, quakes]
     });
 
-    L.control.layers(baseMaps, earthQuakeMaps, {
+    L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
     }).addTo(myMap);
 
