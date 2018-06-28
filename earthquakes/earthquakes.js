@@ -8,36 +8,39 @@ d3.json(quakesUrl, function(data) {
     makeMap(data);
 });
 
+function magColor(magData) {
+    return  magData > 5 ? '#f06b6b' :
+            magData > 4 ? '#f0a76b' :
+            magData > 3 ? '#f3ba4d' :
+            magData > 2 ? '#f3db4d' :
+            magData > 1 ? '#e1f34d' :
+            magData > 0 ? '#b7f34d' :
+                    '#cad2d3'; 
+};
+
 function makeMap(data) {
 
-    //need to use this quakes variable to set the dot size and dot color
-    //maybe I'll need to map some color range thing based on the feature.properties.mag
     function onEachFeature(feature, layer) {
-        layer.bindPopup("<h3>" + feature.properties.place +
+        layer.bindPopup("<h3>" + "Magnitude: " + feature.properties.mag + "<br>" + feature.properties.place +
           "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
       }
     
       // Create a GeoJSON layer containing the features array on the earthquakeData object
       // Run the onEachFeature function once for each piece of data in the array
 
-    var quakes = L.geoJson(data);
-    //  {
-        
-        // pointToLayer: function (feature, latlng) {
-        //     return L.circleMarker(latlng);
-        // },
-    //     style: function(feature) {
-    //         return {
-    //             radius: feature.properties.mag,
-    //             color: "black",
-    //             // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-    //             fillColor: "red",
-    //             fillOpacity: 0.5,
-    //             weight: 1.5
-    //         };
-    //     },
-    //     onEachFeature: onEachFeature,
-    // });
+    var quakes = L.geoJson(data, {
+        onEachFeature: onEachFeature,
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: feature.properties.mag * 5,
+                fillColor: magColor(feature.properties.mag),
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            });
+        },
+    });
 
     // Define map layers
     var lightMap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?" +
