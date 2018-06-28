@@ -8,6 +8,8 @@ I'm a technical marketer with a focus on data, analytics, and marketing-focused 
 
 I've been a people manager, a global product manager, a head of marketing, a medical device startup founder, and I'm currently refining my skillset - focusing on data analysis using Python, and web data visualization using Javascript and d3.
 
+And I'm also one of the creators and hosts of the [You Suck at Marketing](http://www.badmarketingmedia.com) Podcast.
+
 ### Skills
 
 + Google Analytics
