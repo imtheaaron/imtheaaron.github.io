@@ -26,8 +26,9 @@ And I'm also one of the creators and hosts of the [You Suck at Marketing](http:/
 + Flask
 + SQL
 + MongoDB
++ Excel VBA
 + Adobe PS/ID
 
 ### Contact me
 
-aaron [at] aaronburke.net
+aaron@aaronburke.net
