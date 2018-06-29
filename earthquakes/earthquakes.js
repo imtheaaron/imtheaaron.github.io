@@ -3,9 +3,10 @@ var mapboxKey = 'access_token=pk.eyJ1IjoiaW10aGVhYXJvbiIsImEiOiJjamlkdmxmZ3YwZnZ
 // url for all earthquakes over the past 7 days:
 var quakesUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
+var platesUrl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
+
 d3.json(quakesUrl, function(data) {
-    console.log(data);
-    makeMap(data);
+    makeMap(data)
 });
 
 function magColor(magData) {
@@ -27,6 +28,8 @@ function makeMap(data) {
     
       // Create a GeoJSON layer containing the features array on the earthquakeData object
       // Run the onEachFeature function once for each piece of data in the array
+
+    var faults = new L.LayerGroup();
 
     var quakes = L.geoJson(data, {
         onEachFeature: onEachFeature,
@@ -56,7 +59,8 @@ function makeMap(data) {
     };
 
     var overlayMaps = {
-        Earthquakes: quakes
+        Earthquakes: quakes,
+        "Fault Lines": faults
     };
     
     var myMap = L.map("map", {
@@ -68,6 +72,14 @@ function makeMap(data) {
     L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
     }).addTo(myMap);
+
+    d3.json(platesUrl, function(response) {
+       console.log(response);
+        L.geoJson(response, {
+            color: "red",
+            weight: 2
+        }).addTo(faults)
+    });
 
 //legend stuff (not completed yet)
     // var legend = L.control({ position: "bottomright" });
