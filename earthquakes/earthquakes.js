@@ -54,7 +54,7 @@ function makeMap(data) {
 
     // Define a baseMaps object to hold our base layers
     var baseMaps = {
-        "Outdoors Map": outdoorMap,
+        "Geographic Map": outdoorMap,
         "Light Map": lightMap,
     };
 
@@ -81,16 +81,37 @@ function makeMap(data) {
         }).addTo(faults)
     });
 
-//legend stuff (not completed yet)
+//legend creation code
     // var legend = L.control({ position: "bottomright" });
     // legend.onAdd = function() {
     //   var div = L.DomUtil.create("div", "info legend");
-    //   var limits = geojson.options.limits;
-    //   var colors = geojson.options.colors;
-    //   var labels = [];
+    //   var limits = [
+    //       0,
+    //       1,
+    //       2,
+    //       3,
+    //       4,
+    //       5
+    //   ]
+    //   var colors = [
+    //     '#f06b6b',
+    //     '#f0a76b',
+    //     '#f3ba4d',
+    //     '#f3db4d',
+    //     '#e1f34d',
+    //     '#b7f34d',
+    //   ]
+    //   var labels = [
+    //       '0-1',
+    //       '1-2',
+    //       '2-3',
+    //       '3-4',
+    //       '4-5',
+    //       '5+'
+    //   ];
   
     //   // Add min & max
-    //   var legendInfo = "<h1>Median Income</h1>" +
+    //   var legendInfo = "<h1>Earthquake Magnitude</h1>" +
     //     "<div class=\"labels\">" +
     //       "<div class=\"min\">" + limits[0] + "</div>" +
     //       "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
@@ -107,4 +128,33 @@ function makeMap(data) {
     // };
 
     // legend.addTo(myMap);
+
+    var legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function () {
+
+        var div = L.DomUtil.create('div', 'info legend');
+            limits = [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            labels = [];
+        
+        div.innerHTML = "<h4>Earthquake<br>Magnitude</h4>";
+
+        // loop through our density intervals and generate a label with a colored square for each interval
+        for (var i = 0; i < limits.length; i++) {
+            div.innerHTML +=
+                '<i style="background:' + magColor(limits[i] + 1) + '"></i> ' +
+                limits[i] + (limits[i + 1] ? '&ndash;' + limits[i + 1] + '<br>' : '+');
+        }
+
+        return div;
+    };
+
+    legend.addTo(myMap);
 };
