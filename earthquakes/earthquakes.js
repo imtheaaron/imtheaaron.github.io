@@ -54,8 +54,8 @@ function makeMap(data) {
 
     // Define a baseMaps object to hold our base layers
     var baseMaps = {
-    "Light Map": lightMap,
-    "Outdoors Map": outdoorMap
+        "Outdoors Map": outdoorMap,
+        "Light Map": lightMap,
     };
 
     var overlayMaps = {
@@ -64,9 +64,9 @@ function makeMap(data) {
     };
     
     var myMap = L.map("map", {
-        center: [37.6533476, -121.0236725],
+        center: [30.3429959, -5.8608298],
         zoom: 3,
-        layers: [lightMap, quakes]
+        layers: [outdoorMap, quakes, faults]
     });
 
     L.control.layers(baseMaps, overlayMaps, {
