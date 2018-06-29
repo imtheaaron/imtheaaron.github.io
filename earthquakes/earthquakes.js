@@ -60,7 +60,7 @@ function makeMap(data) {
 
     var overlayMaps = {
         Earthquakes: quakes,
-        "Fault Lines": faults
+        "Tectonic Plates": faults
     };
     
     var myMap = L.map("map", {
