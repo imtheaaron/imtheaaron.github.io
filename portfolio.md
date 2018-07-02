@@ -7,6 +7,7 @@ permalink: /portfolio/
 Below are some examples of front end, back end, and full stack data analysis and data visualization programs and web apps that I've put together
 
 ## Font End
+---
 
 ### World Map of Earthquakes
 
