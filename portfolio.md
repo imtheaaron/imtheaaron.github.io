@@ -11,9 +11,11 @@ Below are some examples of front end, back end, and full stack data analysis and
 
 ### World Map of Earthquakes
 
-<div class="resp-container">
+<!-- <div class="resp-container">
     <iframe class="resp-iframe" src="http://www.aaronburke.net/earthquakes/index.html" allowfullscreen></iframe>
-</div>
+</div> -->
+
+![world map of the last 7 days of earthquakes](images/earthquakes.jpg)
 
 [www.aaronburke.net/earthquakes/index.html](http://www.aaronburke.net/earthquakes/index.html)
 
