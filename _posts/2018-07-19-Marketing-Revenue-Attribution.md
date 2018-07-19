@@ -29,7 +29,7 @@ Those numbers sound fantastic! 200% ROI!!
 
 This is lazy, and it is wrong. Even if you are marketing a software product, with essentially minimal to no marginal cost for each new purchase, there are still costs for each new customer. Assuming a gross margin of 100% neglects other ongoing costs for each customer. Even cloud-based SaaS companies do have marginal costs - including server costs, storage costs, and increased utilization of Customer Success / Customer Support teams, for example. Our previous equation does not at all take into account the costs for our product.
 
-And what if your product is physical, with a (often much lower) gross margin common to physical products? Let's take a look at two cases. 
+And what if your product is physical, with an (often much lower) gross margin common to physical products? Let's take a look at two cases. 
 
 Case 1: assume you have end-to-end control of your processes from manufacturing to distribution, and have been able to minimize your production and logistics costs for a premium product in a market with low pricing pressure. Congratulations - your Gross Margin is 80%!
 
