@@ -21,4 +21,4 @@ Full working app: [www.aaronburke.net/earthquakes/index.html](http://www.aaronbu
 
 [GitHub repo](https://github.com/imtheaaron/imtheaaron.github.io/tree/master/earthquakes)
 
-This program queries the US Geological Survey for a GeoJson of all earthquakes in the past 7 days. Using JavaScript and Leaflet, each earthquakes is then mapped with the color and size of each circle relative to the magnitude of the earthquake. A user can also select to display lines of tectonic plates, and each earthquake circle is clickable which will display additional information.
+This program queries the US Geological Survey for a GeoJson of all earthquakes in the past 7 days. Using JavaScript and Leaflet, each earthquake is then mapped with the color and size of each circle relative to the magnitude of the earthquake. A user can also select to display lines of tectonic plates, and each earthquake circle is clickable which will display additional information.

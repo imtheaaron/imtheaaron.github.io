@@ -12,7 +12,7 @@ How does this work? Briefly, a general overview of this is:
 2. Track the traffic from your marketing content and, using an analytics package, view how this traffic interacts with your web site.
 3. Measure how much of this traffic turns into a lead and then into business.
 
-Through this general framework, it is possible for marketers to directly attribute revenue to their marketing efforts. And, to their credit, marketers very quickly embraced this use of data to measure the effectiveness of their marketing. Marketers began to generate reports on marketing effectiveness that directly tied marketing spend to revenue and have been able to show ROI from money spent on marketing. This is fantastic!
+Through this general framework, it is possible for marketers to directly attribute revenue to their marketing efforts. And, to their credit, marketers very quickly embraced this use of data to measure the effectiveness of their marketing. Marketers began to generate reports on marketing effectiveness that directly tied marketing spend to revenue, and have been able to show ROI from money spent on marketing. This is fantastic!
 
 **But the way many marketers measure ROI is wrong.**
 
@@ -23,7 +23,7 @@ Wrong in a way that often vastly overstates the effectiveness of marketing and m
   <img src="../images/bad-marketing-roi.png" width="500px"/></p>
 
 
-It amazes me at how often I've been in financial analysis meetings and have seen some form of this presented by marketing teams to measure effectiveness of digital campaigns. On it's face, this equation makes some kind of sense. *We spent $1000 on marketing, and made $3,000 in marginal revenue that we can directly attribute to that spend. Ok, great - so we made an additional $2,000, and our marketing had an ROI of 200%!*
+It amazes me at how often I've been in financial analysis meetings and have seen some form of data based on this calculation presented by marketing teams to show the effectiveness of their digital campaigns. On it's face, this equation makes some kind of sense. *We spent $1000 on marketing, and made $3,000 in marginal revenue that we can directly attribute to that spend. Ok, great - so we made an additional $2,000, and our marketing had an ROI of 200%!*
 
 Those numbers sound fantastic! 200% ROI!!
 
@@ -31,7 +31,7 @@ This is lazy, and it is wrong. Even if you are marketing a software product, wit
 
 And what if your product is physical, with an (often much lower) gross margin common to physical products? Let's take a look at two cases. 
 
-Case 1: assume you have end-to-end control of your processes from manufacturing to distribution, and have been able to minimize your production and logistics costs for a premium product in a market with low pricing pressure. Congratulations - your Gross Margin is 80%!
+**Case 1:** assume you have end-to-end control of your processes from manufacturing to distribution, and have been able to minimize your production and logistics costs for a premium product in a market with low pricing pressure. Congratulations - your Gross Margin is 80%!
 
 To calculate our marketing ROI, we first need to multiply our revenue by our gross margin. 
 
@@ -42,7 +42,7 @@ Our ROI equation should be:
 
 Using our revenue and spend numbers from before with our gross margin, we have $3,000 * 80% = $2,400, which, after subtracting our marketing spend ($1,000) yields a marketing-generated marginal revenue of $1,400, and ROI 140%. Still good! But realistic.
 
-Case 2: You are operating in a price-sensitive market with many competitors. Let's say you run an auto dealership. Due to the high costs for product (buying cars is expensive!) that dealerships pay, gross margin is frequently as low as 15%. Let's see how well our marketing did in this case.
+**Case 2:** You are operating in a price-sensitive market with many competitors. Let's say you run an auto dealership. Due to the high costs for product (buying cars is expensive!) that dealerships pay, gross margin is frequently as low as 15%. Let's see how well our marketing did in this case.
 
 $3000 (revenue) * 15% = $450. $450 - $1,000 (marketing spend) = -$550!
 
@@ -50,7 +50,7 @@ Uh-oh. Looks like that $1,000 spent to get an extra $3,000 of revenue lost the c
 
 ## Why is marketing ROI being overstated? ##
 
-My guess is that in most cases this stems not from a deliberate effort to deceive about the effects of marketing, but from ignorance and maybe some overexuberance in *wanting* marketing to look great.
+My guess is that in most cases this stems not from a deliberate effort to deceive about the effectiveness of marketing, but from ignorance and maybe some overexuberance in *wanting* marketing to look great.
 
 Many marketers may not have access to actual product costs. They may be marketing a mix of products that make performing a realistic ROI calculation complex. Or they may not even have the business-focused background that would cause them to even think about product costs. I've seen examples of all of this (including marketers deliberately overstating their effectiveness, unfortunately.)
 
