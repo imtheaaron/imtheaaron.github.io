@@ -55,6 +55,6 @@ The initial data was cleaned and the database was set up using Pandas running in
 
 **Technologies** MongoDB, PyMongo, Flask, Python, BeautifulSoup, Splinter, Selenium, Pandas
 
-This is a multi-site web scraping program. Splinter and Selenium are used to drive a browser programmed to scrape data on Mars from the USGS, Space Facts, NASA, and the Mars Weather Report Twitter account. Content is parsed for use using Beautiful Soup, and results are loaded into a Mongo non-relational database. When a user clicks the "scrape" button, the program executes and scrape for the most recent data on each site and updates the display.
+This is a multi-site web scraping program. Splinter and Selenium are used to drive a browser programmed to scrape data on Mars from the USGS, Space Facts, NASA, and the Mars Weather Report Twitter account. Content is parsed for use using BeautifulSoup, and results are loaded into a Mongo non-relational database. When a user clicks the "scrape" button, the program executes and scrape for the most recent data on each site and updates the display.
 
 This was a fun exercise in practical web scraping.
