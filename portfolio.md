@@ -30,7 +30,7 @@ This program queries the US Geological Survey for a GeoJson of all earthquakes i
 
 ### FIFA World Cup Rankings and Performance Analysis
 
-![World Cup Analysis Dashboard](https://github.com/imtheaaron/World-Cup-Analysis/blob/master/images/full_dashboard.jpg)
+![World Cup Analysis Dashboard](images/world_cup_dashboard.jpg)
 
 [GitHub repo](https://github.com/imtheaaron/World-Cup-Analysis)
 
