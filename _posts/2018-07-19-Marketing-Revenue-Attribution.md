@@ -48,6 +48,8 @@ $3000 (revenue) * 15% = $450. $450 - $1,000 (marketing spend) = -$550!
 
 Uh-oh. Looks like that $1,000 spent to get an extra $3,000 of revenue lost the company money overall. What looked great from a surface level is actually very ungood.
 
+(**One big caveat**: We have not at all discussed life-time-value (LTV) of a customer here. In businesses where it can be expected that a customer will have a life-time-value of revenue greater than the initial revenue generated, LTV may be incorporated as a factor when calculating the ROI from marketing. However, things can then become much more complicated, and I've purposefully left LTV considerations out from this post.)
+
 ## Why is marketing ROI being overstated? ##
 
 My guess is that in most cases this stems not from a deliberate effort to deceive about the effectiveness of marketing, but from ignorance and maybe some overexuberance in *wanting* marketing to look great.
